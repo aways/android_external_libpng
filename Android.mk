@@ -22,7 +22,7 @@ common_SRC_FILES := \
 	pngwtran.c \
 	pngwutil.c
 
-common_CFLAGS := -std=gnu89 -fvisibility=hidden ## -fomit-frame-pointer
+common_CFLAGS := -std=gnu89 -fvisibility=hidden ## -fomit-frame-pointer $(call-cc-option,-Qunused-arguments)
 
 ifeq ($(HOST_OS),windows)
   ifeq ($(USE_MINGW),)
